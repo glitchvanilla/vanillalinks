@@ -1,1 +1,420 @@
-Hello world
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glitch Vanilla</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --pink:#ff8fd6;
+    --pink-light:#ffd4ec;
+    --purple:#a78bff;
+    --blue:#8de7ff;
+    --mint:#b9ffe3;
+    --cream:#fff8ef;
+    --dark:#5f5a7a;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--cream);
+    font-family:sans-serif;
+    color:var(--dark);
+    min-height:100vh;
+    background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,143,214,.15), transparent 30%),
+    radial-gradient(circle at 80% 40%, rgba(141,231,255,.15), transparent 30%);
+}
+
+/* HEADER */
+
+header{
+    padding:60px 20px 30px;
+    text-align:center;
+}
+
+.logo-wrapper{
+    position:relative;
+    display:inline-block;
+}
+
+.logo-glitch{
+    font-family:'Press Start 2P';
+    font-size:clamp(2rem,5vw,4rem);
+    color:white;
+    text-shadow:
+    -3px 0 var(--pink),
+    3px 0 var(--blue),
+    0 0 20px rgba(167,139,255,.6);
+    background:linear-gradient(
+        90deg,
+        var(--purple),
+        #c4b5fd
+    );
+    padding:20px 30px;
+    border-radius:20px;
+    position:relative;
+}
+
+.logo-glitch::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+    90deg,
+    transparent 0 15px,
+    rgba(255,143,214,.35) 15px 25px
+    );
+    mix-blend-mode:screen;
+    opacity:.6;
+}
+
+.logo-vanilla{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(3rem,7vw,6rem);
+    color:#ff9cda;
+    margin-top:-15px;
+    text-shadow:
+    0 0 10px rgba(255,255,255,.8),
+    0 0 20px rgba(255,143,214,.5);
+}
+
+/* PERFUME ICONS */
+
+.decor{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    font-size:28px;
+}
+
+.decor span{
+    filter:drop-shadow(0 0 8px rgba(255,143,214,.5));
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:700px;
+    margin:20px auto;
+    padding:0 20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:999px;
+    background:white;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+    font-size:16px;
+}
+
+/* FILTERS */
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    padding:25px;
+}
+
+.filter-btn{
+    border:none;
+    cursor:pointer;
+    padding:10px 18px;
+    border-radius:999px;
+    background:white;
+    color:var(--dark);
+    font-weight:bold;
+    transition:.3s;
+}
+
+.filter-btn.active{
+    background:linear-gradient(
+    90deg,
+    var(--pink),
+    var(--purple)
+    );
+    color:white;
+}
+
+/* GRID */
+
+.grid{
+    max-width:1300px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(260px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card-image{
+    height:220px;
+    background:linear-gradient(
+    135deg,
+    var(--pink-light),
+    #e9e0ff,
+    #d9f9ff
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.category{
+    display:inline-block;
+    font-size:12px;
+    font-weight:bold;
+    color:white;
+    padding:6px 12px;
+    border-radius:999px;
+    background:linear-gradient(
+    90deg,
+    var(--pink),
+    var(--purple)
+    );
+}
+
+.card h3{
+    margin:15px 0 10px;
+}
+
+.card p{
+    opacity:.8;
+    font-size:14px;
+}
+
+.btn{
+    display:block;
+    margin-top:15px;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    padding:12px;
+    border-radius:999px;
+    background:linear-gradient(
+    90deg,
+    var(--pink),
+    var(--purple)
+    );
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    opacity:.7;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo-wrapper">
+
+<div class="logo-glitch">
+GLITCH
+</div>
+
+<div class="logo-vanilla">
+Vanilla
+</div>
+
+</div>
+
+<div class="decor">
+<span>⭐</span>
+<span>💖</span>
+<span>🌙</span>
+<span>🪐</span>
+<span>✨</span>
+<span>🧪</span>
+<span>⭐</span>
+</div>
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Buscar produtos..."
+> 
+</div>
+
+<div class="filters">
+
+<button class="filter-btn active" data-filter="Tudo">Tudo</button>
+<button class="filter-btn" data-filter="Perfumes">Perfumes</button>
+<button class="filter-btn" data-filter="Skin Care">Skin Care</button>
+<button class="filter-btn" data-filter="Acessórios">Acessórios</button>
+<button class="filter-btn" data-filter="Organização">Organização</button>
+<button class="filter-btn" data-filter="Hidratantes">Hidratantes</button>
+<button class="filter-btn" data-filter="Casa">Casa</button>
+<button class="filter-btn" data-filter="Viagens">Viagens</button>
+<button class="filter-btn" data-filter="Pets">Pets</button>
+
+</div>
+
+<section class="grid" id="products">
+
+<!-- EXEMPLOS -->
+
+<div class="card" data-category="Perfumes">
+<div class="card-image">💖</div>
+<div class="card-body">
+<span class="category">Perfumes</span>
+<h3>Perfume Exemplo</h3>
+<p>Descrição do produto.</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+</div>
+
+<div class="card" data-category="Skin Care">
+<div class="card-image">✨</div>
+<div class="card-body">
+<span class="category">Skin Care</span>
+<h3>Sérum Facial</h3>
+<p>Descrição do produto.</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+</div>
+
+<div class="card" data-category="Hidratantes">
+<div class="card-image">🌙</div>
+<div class="card-body">
+<span class="category">Hidratantes</span>
+<h3>Hidratante Corporal</h3>
+<p>Descrição do produto.</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+</div>
+
+<div class="card" data-category="Organização">
+<div class="card-image">🪐</div>
+<div class="card-body">
+<span class="category">Organização</span>
+<h3>Organizador</h3>
+<p>Descrição do produto.</p>
+<a href="#" class="btn">Comprar</a>
+</div>
+</div>
+
+</section>
+
+<footer>
+
+GLITCH VANILLA ✦ Affiliate Links
+
+</footer>
+
+<script>
+
+const buttons =
+document.querySelectorAll('.filter-btn');
+
+const cards =
+document.querySelectorAll('.card');
+
+const searchInput =
+document.getElementById('searchInput');
+
+let currentFilter = "Tudo";
+
+buttons.forEach(button => {
+
+button.addEventListener('click', () => {
+
+buttons.forEach(b =>
+b.classList.remove('active'));
+
+button.classList.add('active');
+
+currentFilter =
+button.dataset.filter;
+
+filterProducts();
+
+});
+
+});
+
+searchInput.addEventListener(
+'input',
+filterProducts
+);
+
+function filterProducts(){
+
+const search =
+searchInput.value.toLowerCase();
+
+cards.forEach(card => {
+
+const category =
+card.dataset.category;
+
+const text =
+card.innerText.toLowerCase();
+
+const categoryMatch =
+currentFilter === "Tudo"
+||
+category === currentFilter;
+
+const searchMatch =
+text.includes(search);
+
+card.style.display =
+(categoryMatch && searchMatch)
+? "block"
+: "none";
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
