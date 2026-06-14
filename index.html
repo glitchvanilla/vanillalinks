@@ -39,13 +39,23 @@ body{
 /* HEADER */
 
 header{
-    padding:60px 20px 30px;
+    padding:12px 10px 8px;
     text-align:center;
+    background-color:#ffffff; /* fundo alterado para branco */
+    border-bottom:1px solid rgba(0,0,0,.03);
 }
 
 .logo-wrapper{
     position:relative;
     display:inline-block;
+}
+
+.logo-image{
+    max-width:320px;
+    width:clamp(180px,40vw,420px);
+    height:auto;
+    display:block;
+    margin:0 auto;
 }
 
 .logo-glitch{
@@ -251,25 +261,7 @@ footer{
 <header>
 
 <div class="logo-wrapper">
-
-<div class="logo-glitch">
-GLITCH
-</div>
-
-<div class="logo-vanilla">
-Vanilla
-</div>
-
-</div>
-
-<div class="decor">
-<span>⭐</span>
-<span>💖</span>
-<span>🌙</span>
-<span>🪐</span>
-<span>✨</span>
-<span>🧪</span>
-<span>⭐</span>
+    <img src="logo-glitch-vanilla.png.png" alt="Glitch Vanilla" class="logo-image">
 </div>
 
 </header>
@@ -284,15 +276,15 @@ placeholder="Buscar produtos..."
 
 <div class="filters">
 
-<button class="filter-btn active" data-filter="Tudo">Tudo</button>
-<button class="filter-btn" data-filter="Perfumes">Perfumes</button>
-<button class="filter-btn" data-filter="Skin Care">Skin Care</button>
-<button class="filter-btn" data-filter="Acessórios">Acessórios</button>
-<button class="filter-btn" data-filter="Organização">Organização</button>
-<button class="filter-btn" data-filter="Hidratantes">Hidratantes</button>
-<button class="filter-btn" data-filter="Casa">Casa</button>
-<button class="filter-btn" data-filter="Viagens">Viagens</button>
-<button class="filter-btn" data-filter="Pets">Pets</button>
+<button class="filter-btn active" data-filter="Tudo">🔎 Tudo</button>
+<button class="filter-btn" data-filter="Perfumes">🌸 Perfumes</button>
+<button class="filter-btn" data-filter="Skin Care">🧴 Skin Care</button>
+<button class="filter-btn" data-filter="Acessórios">🎀 Acessórios</button>
+<button class="filter-btn" data-filter="Organização">🗂️ Organização</button>
+<button class="filter-btn" data-filter="Hidratantes">💧 Hidratantes</button>
+<button class="filter-btn" data-filter="Casa">🏠 Casa</button>
+<button class="filter-btn" data-filter="Viagens">✈️ Viagens</button>
+<button class="filter-btn" data-filter="Pets">🐾 Pets</button>
 
 </div>
 
@@ -310,13 +302,27 @@ placeholder="Buscar produtos..."
 </div>
 </div>
 
+<div class="card" data-category="Perfumes">
+<div class="card-image">
+    <img src="modvanilla.png" alt="Ariana Grande MOD Vanilla 100ml" style="width:100%;height:100%;object-fit:contain;display:block;">
+</div>
+<div class="card-body">
+<span class="category">Perfumes</span>
+<h3>Ariana Grande MOD Vanilla 100ml</h3>
+<p>Aroma gourmand de baunilha — Eau de Parfum 100ml.</p>
+<a href="https://www.amazon.com.br/Ariana-Grande-Vanilla-Parfum-100mL/dp/B0BRGLV648?tag=glitchvanilla-20" class="btn" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
+</div>
+</div>
+
 <div class="card" data-category="Skin Care">
-<div class="card-image">✨</div>
+<div class="card-image">
+    <img src="https://m.media-amazon.com/images/I/61dJPM0QUyL._AC_SY355_.jpg" alt="Hada Labo Gokujyun Oil Cleasing 200ml" style="width:100%;height:100%;object-fit:contain;display:block;">
+</div>
 <div class="card-body">
 <span class="category">Skin Care</span>
-<h3>Sérum Facial</h3>
-<p>Descrição do produto.</p>
-<a href="#" class="btn">Comprar</a>
+<h3>Hada Labo Gokujyun Oil Cleasing 200ml</h3>
+<p>Óleo de limpeza facial demaquilante com ácido hialurônico.</p>
+<a href="https://www.amazon.com.br/Gokujyun-Oil-Cleasing-Hada-Labo/dp/B07ZD6R4QK?tag=glitchvanilla-20" class="btn" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
 </div>
 </div>
 
@@ -331,12 +337,50 @@ placeholder="Buscar produtos..."
 </div>
 
 <div class="card" data-category="Organização">
-<div class="card-image">🪐</div>
+<div class="card-image">
+    <img src="organizadorrosa.png" alt="Organizador Maquiagem Acrílico Rose" style="width:100%;height:100%;object-fit:contain;display:block;">
+</div>
 <div class="card-body">
 <span class="category">Organização</span>
-<h3>Organizador</h3>
-<p>Descrição do produto.</p>
-<a href="#" class="btn">Comprar</a>
+<h3>Organizador Maquiagem Acrílico Rose</h3>
+<p>Organizador de maquiagem em acrílico com 2 andares, perfeito para perfumes e cosméticos.</p>
+<a href="https://www.amazon.com.br/Organizador-Maquiagem-Perfume-Rose-Acr%C3%ADlico/dp/B0DGVTJWTS?tag=glitchvanilla-20" class="btn" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
+</div>
+</div>
+
+<div class="card" data-category="Organização">
+<div class="card-image">
+    <img src="https://m.media-amazon.com/images/I/61ALs8Yyi0L._AC_SX425_.jpg" alt="Organizador Multiuso" style="width:100%;height:100%;object-fit:contain;display:block;">
+</div>
+<div class="card-body">
+<span class="category">Organização</span>
+<h3>Organizador Multiuso Prateleira 2 Andares</h3>
+<p>Prateleira acrílica para maquiagem e cosméticos — ideal para penteadeiras e banheiros.</p>
+<a href="https://www.amazon.com.br/Organizador-Multiuso-Prateleira-Cosm%C3%A9ticos-Penteadeira/dp/B0F1ZCNK6L?_encoding=UTF8&pd_rd_w=UUjc7&content-id=amzn1.sym.19eb8d98-6af2-40c1-8b24-e3a31f2518e5:amzn1.symc.5a16118f-86f0-44cd-8e3e-6c5f82df43d0&pf_rd_p=19eb8d98-6af2-40c1-8b24-e3a31f2518e5&pf_rd_r=AKHWWNTGM1NP7Y21S4NM&pd_rd_wg=u1X2q&pd_rd_r=8bbc2fb6-76de-4a43-b97e-03ca61136017&linkCode=sl2&tag=glitchvanilla-20&linkId=9d88335f48a3b7f1cd71ce1acdfd03ee&ref_=as_li_ss_tl" class="btn" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
+</div>
+</div>
+
+<div class="card" data-category="Organização">
+<div class="card-image">
+    <img src="https://m.media-amazon.com/images/I/61xaDsG+pQL._AC_SX425_.jpg" alt="Organizador de Maquiagem Giratório 360° Branco" style="width:100%;height:100%;object-fit:contain;display:block;">
+</div>
+<div class="card-body">
+<span class="category">Organização</span>
+<h3>Organizador de Maquiagem Giratório 360°</h3>
+<p>Organizador minimalista com rotação 360° para maquiagem, perfumes e acessórios.</p>
+<a href="https://www.amazon.com.br/Organizador-Maquiagem-Perfume-Minimalista-Giratorio/dp/B0GYS93XQS?tag=glitchvanilla-20" class="btn" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
+</div>
+</div>
+
+<div class="card" data-category="Organização">
+<div class="card-image">
+    <img src="https://m.media-amazon.com/images/I/619i+59hhQL._AC_SY450_.jpg" alt="Kit 2 Bandejas Douradas Decorativas" style="width:100%;height:100%;object-fit:contain;display:block;">
+</div>
+<div class="card-body">
+<span class="category">Organização</span>
+<h3>Kit 2 Bandejas Douradas Decorativas 23x9cm</h3>
+<p>Bandejas espelhadas para organizar joias, perfumes e maquiagem com estilo.</p>
+<a href="https://www.amazon.com.br/Bandejas-Decorativas-Espelhadas-Maquiagem-Organizadora/dp/B0H2G2J2SM?tag=glitchvanilla-20" class="btn" target="_blank" rel="noopener noreferrer">Ver na Amazon</a>
 </div>
 </div>
 
